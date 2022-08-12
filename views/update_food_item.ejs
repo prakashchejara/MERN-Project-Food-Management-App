@@ -1,0 +1,70 @@
+<!--include header-->
+<%- include('include/_header')%>
+<!--/include header-->
+
+<!--Main Site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/" class="href"><i class="fas fa-angle-double-left"></i> All Food Items</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Food Item</h2>
+            <span class="text-light">Use the below form to update a Food Item</span>
+        </div>
+
+        <!--update food item form-->
+        <!--form handeling-->
+        <form method="POST" id="update_food_item">
+            <div class="new_food_item">
+                <div class="form-group">
+                    <label for="food_item" class="text-light">Food Item</label>
+                    <input type="hidden" name="id" value="<%= foodlist._id %>">
+                    <input type="text" name="food_item" value="<%= foodlist.food_item %>" placeholder="Your food item">
+                </div>
+                <div class="form-group">
+                    <label for="ftype" class="text-light">Select Food Type</label>
+                    <select name="ftype" id="food-type">
+                        <option value="Cookable" <%= foodlist.ftype == 'Cookable'?'selected':'' %>>Cookable</option>
+                        <option value="Non-cookable" <%= foodlist.ftype == 'Non-cookable'?'selected':'' %>>Non-cookable</option>
+                        <option value="Cooked" <%= foodlist.ftype == 'Cooked'?'selected':'' %>>Cooked</option>
+                        <option value="Fat" <%= foodlist.ftype == 'Fat'?'selected':'' %>>Fat</option>
+                        <option value="Dairy" <%= foodlist.ftype == 'Dairy'?'selected':'' %>>Dairy</option>
+                        <option value="Protein" <%= foodlist.ftype == 'Protein'?'selected':'' %>>Lentils/Beans/Peas</option>
+                        <option value="Other" <%= foodlist.ftype == 'Other'?'selected':'' %>>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fstorage" class="text-light">Select Food Storage Condition:</label>
+                        <select name="fstorage" id="food-storage">
+                            <option value="At Room Temprature" <%= foodlist.fstorage == 'At Room Temprature'?'selected':'' %>>At Room Temprature</option>
+                            <option value="In Refrigerator" <%= foodlist.fstorage == 'In Refrigerator'?'selected':'' %>>In Refrigerator</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="pdate" class="text-light">Food Purchased/Prepared Date:</label>
+                    <input type="date" name="pdate" value="" id="pdate">
+                </div>
+                <div class="form-group">
+                    <label for="rdate" class="text-light">Reminder Date:</label>
+                    <input type="date" name="rdate" value="" id="rdate">
+                </div>
+                <div class="form-group">
+                    <label for="atime" class="text-light">Get Alert On:</label><br>
+                    <input type="time" name="atime" value="" id="atime" min="0" max="12">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Update</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</main>
+<!--/Main Site-->
+
+<!--include footer-->
+<%- include('include/_footer')%>
+<!--/include footer-->

@@ -1,0 +1,23 @@
+
+<% for(var i=0;i<foodlist.length;i++){ %>
+
+<tr>
+    <td><%=i+1%></td>
+    <td><%=foodlist[i].food_item%></td>
+    <td><%=foodlist[i].ftype%></td>
+    <td><%=foodlist[i].fstorage%></td>
+    <td><%=foodlist[i].pdate%></td>
+    <td><%=foodlist[i].rdate%></td>
+    <td><%=foodlist[i].atime%></td>
+    <td>
+        <a href="/update-food-item?id=<%=foodlist[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id="<%=foodlist[i]._id%>">
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+
+</tr>
+<% } %>
+
