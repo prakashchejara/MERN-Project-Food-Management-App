@@ -26,6 +26,8 @@
 
  })
 
+ var windows = this || self || windows;
+
  if(windows.location.pathname=="/"){
     $ondelete=$(".table tbody td a.delete");
     $ondelete.click(function(){
