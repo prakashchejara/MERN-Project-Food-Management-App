@@ -61,7 +61,7 @@ exports.find=(req,res)=>{
     }}
 
 //update a new identified food item
-exports.update=(res,req)=>{
+exports.update=(req,res)=>{
     if(!req.body){
         return res
         .status(400)
@@ -85,7 +85,7 @@ exports.update=(res,req)=>{
 }
 
 //Delete a food item with specified item id in the request
-exports.delete=(res,req)=>{
+exports.delete=(req,res)=>{
     const id=req.params.id;
 
     Fitemdb.findByIdAndDelete(id)
