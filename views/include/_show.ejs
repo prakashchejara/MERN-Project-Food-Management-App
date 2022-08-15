@@ -6,8 +6,8 @@
     <td><%=foodlist[i].food_item%></td>
     <td><%=foodlist[i].ftype%></td>
     <td><%=foodlist[i].fstorage%></td>
-    <td><%=foodlist[i].pdate%></td>
-    <td><%=foodlist[i].rdate%></td>
+    <td><%= foodlist[i].pdate.substring(8, 10) + "-" + foodlist[i].pdate.substring(5, 7) + "-" + foodlist[i].pdate.substring(0, 4)%></td>
+    <td><%=foodlist[i].rdate.substring(8, 10) + "-" + foodlist[i].rdate.substring(5, 7) + "-" + foodlist[i].rdate.substring(0, 4)%></td>
     <td><%=foodlist[i].atime%></td>
     <td>
         <a href="/update-food-item?id=<%=foodlist[i]._id%>" class="btn border-shadow update">
