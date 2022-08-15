@@ -45,15 +45,15 @@
                 </div>
                 <div class="form-group">
                     <label for="pdate" class="text-light">Food Purchased/Prepared Date:</label>
-                    <input type="date" name="pdate" value="" id="pdate">
+                    <input type="date" name="pdate" value="<%= foodlist.pdate.substring(0,10) %>" id="pdate">
                 </div>
                 <div class="form-group">
                     <label for="rdate" class="text-light">Reminder Date:</label>
-                    <input type="date" name="rdate" value="" id="rdate">
+                    <input type="date" name="rdate" value="<%= foodlist.rdate.substring(0,10) %>" id="rdate">
                 </div>
                 <div class="form-group">
                     <label for="atime" class="text-light">Get Alert On:</label><br>
-                    <input type="time" name="atime" value="" id="atime" min="0" max="12">
+                    <input type="time" name="atime" value="<%= foodlist.atime %>" id="atime" min="0" max="12">
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn text-dark update">Update</button>
