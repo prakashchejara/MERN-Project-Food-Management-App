@@ -5,6 +5,7 @@ const bodyparser = require("body-parser");
 const path = require('path');
 
 const connectDB=require('./server/database/connection');
+const { Interface } = require('readline');
 
 const app = express();
 dotenv.config({path:'config.env'})
